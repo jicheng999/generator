@@ -1,5 +1,5 @@
 /**
- *    Copyright 2006-2018 the original author or authors.
+ *    Copyright 2006-2019 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -194,6 +194,7 @@ public class MyBatisGeneratorMojo extends AbstractMojo {
 
         runScriptIfNecessary();
 
+        getLog().info("##############################################tableNames: "+tableNames);
         Set<String> fullyqualifiedTables = new HashSet<>();
         if (StringUtility.stringHasValue(tableNames)) {
             StringTokenizer st = new StringTokenizer(tableNames, ","); //$NON-NLS-1$
@@ -205,6 +206,7 @@ public class MyBatisGeneratorMojo extends AbstractMojo {
             }
         }
 
+        getLog().info("##############################################contexts: "+contexts);
         Set<String> contextsToRun = new HashSet<>();
         if (StringUtility.stringHasValue(contexts)) {
             StringTokenizer st = new StringTokenizer(contexts, ","); //$NON-NLS-1$
