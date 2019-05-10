@@ -24,7 +24,8 @@
 
     <context id="table">
         <commentGenerator>
-            <property name="suppressDate" value="false"></property>
+            <property name="addRemarkComments" value="true"></property>
+            <property name="suppressDate" value="true"></property>
             <property name="suppressAllComments" value="false"></property>
         </commentGenerator>
 
