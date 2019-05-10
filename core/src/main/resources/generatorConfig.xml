@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+
+       Copyright 2006-2019 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <classPathEntry
+            location="D:/mvn_repository/mvn_repository_bank/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar"/>
+
+    <context id="table">
+        <commentGenerator>
+            <property name="suppressDate" value="false"></property>
+            <property name="suppressAllComments" value="false"></property>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/payment"
+                        userId="root" password="111111"/>
+        <javaModelGenerator targetPackage="com.xyebank.payment.entity" targetProject="./src/main/java"/>
+        <sqlMapGenerator targetPackage="com.xyebank.payment.mapper" targetProject="./src/main/java"/>
+        <javaClientGenerator targetPackage="com.xyebank.payment.mapper" targetProject="./src/main/java"
+                             type="XMLMAPPER"/>
+        <!--<table schema="SPmPayRequest" tableName="s_pm_pay_request" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="YeepayPayRequest" tableName="s_yeepay_pay_request" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="YeepayRefundQuery" tableName="s_yeepay_refund_query" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="YeepayRefundRequest" tableName="s_yeepay_refund_request" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="YeepayTradeQuery" tableName="s_yeepay_trade_query" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="SysConfig" tableName="m_sys_config" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="SPmRefundRequest" tableName="s_pm_refund_request" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="SPmMerchantInfo" tableName="s_pm_merchant_info" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="Demo" tableName="demo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <table schema="SPmMessage" tableName="s_pm_message" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+
+
+    </context>
+
+</generatorConfiguration>
