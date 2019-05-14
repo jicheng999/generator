@@ -29,12 +29,12 @@
             <property name="suppressAllComments" value="false"></property>
         </commentGenerator>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/payment"
-                        userId="root" password="111111"/>
-        <javaModelGenerator targetPackage="com.xyebank.payment.entity" targetProject="./src/main/java"/>
-        <sqlMapGenerator targetPackage="com.xyebank.payment.mapper" targetProject="./src/main/java"/>
-        <javaClientGenerator targetPackage="com.xyebank.payment.mapper" targetProject="./src/main/java"
-                             type="XMLMAPPER"/>
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/payment"-->
+                        <!--userId="root" password="111111"/>-->
+        <!--<javaModelGenerator targetPackage="com.xyebank.payment.entity" targetProject="./src/main/java"/>-->
+        <!--<sqlMapGenerator targetPackage="com.xyebank.payment.mapper" targetProject="./src/main/java"/>-->
+        <!--<javaClientGenerator targetPackage="com.xyebank.payment.mapper" targetProject="./src/main/java"-->
+                             <!--type="XMLMAPPER"/>-->
         <!--<table schema="SPmPayRequest" tableName="s_pm_pay_request" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
         <!--<table schema="YeepayPayRequest" tableName="s_yeepay_pay_request" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
         <!--<table schema="YeepayRefundQuery" tableName="s_yeepay_refund_query" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
@@ -44,8 +44,16 @@
         <!--<table schema="SPmRefundRequest" tableName="s_pm_refund_request" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
         <!--<table schema="SPmMerchantInfo" tableName="s_pm_merchant_info" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
         <!--<table schema="Demo" tableName="demo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
-        <table schema="SPmMessage" tableName="s_pm_message" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <!--<table schema="SPmMessage" tableName="s_pm_message" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
 
+
+        <!--大屏展示-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.0.134:3306/new-public-support" userId="root" password="SJD_db_pwd" />
+        <javaModelGenerator targetPackage="com.xyebank.support.phd.new_support.entity" targetProject="C:\Users\Lenovo\Desktop\generator" />
+        <sqlMapGenerator targetPackage="com.xyebank.support.phd.new_support.dao" targetProject="C:\Users\Lenovo\Desktop\generator" />
+        <javaClientGenerator targetPackage="com.xyebank.support.phd.new_support.dao" targetProject="C:\Users\Lenovo\Desktop\generator" type="XMLMAPPER" />
+        <table schema="SShowDataApply" tableName="s_show_data_apply" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table schema="SShowDataRegister" tableName="s_show_data_register" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 
     </context>
 
